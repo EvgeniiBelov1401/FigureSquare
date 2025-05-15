@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35806.99 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureSquare", "FigureSquare.csproj", "{40AE0030-F749-4D18-AF83-22BC2A58961E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureSquare.Tests", "..\FigureSquare.Tests\FigureSquare.Tests.csproj", "{F9F1A48E-839B-4D40-9F65-CBE2646D57DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{40AE0030-F749-4D18-AF83-22BC2A58961E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40AE0030-F749-4D18-AF83-22BC2A58961E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40AE0030-F749-4D18-AF83-22BC2A58961E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9F1A48E-839B-4D40-9F65-CBE2646D57DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F1A48E-839B-4D40-9F65-CBE2646D57DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F1A48E-839B-4D40-9F65-CBE2646D57DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F1A48E-839B-4D40-9F65-CBE2646D57DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

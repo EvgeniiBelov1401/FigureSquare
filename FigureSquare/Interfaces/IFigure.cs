@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FigureSquare.Interfaces
 {
-    interface IFigure
+    public interface IFigure
     {
         double GetArea();
     }
