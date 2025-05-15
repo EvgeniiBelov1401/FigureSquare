@@ -9,24 +9,19 @@ namespace FigureSquare.Modules
 {
     public class Circle : IFigure
     {
-        private double Radius { get; set; }
+        public double Radius { get; }
+
         public Circle()
         {
-            while (Radius == default)
+            double radius = 0;
+            while (radius <= 0)
             {
                 Console.Write("Введите радиус: ");
                 try
                 {
-                    if (double.TryParse(Console.ReadLine(), out double radius))
+                    if (double.TryParse(Console.ReadLine(), out double input) && input > 0)
                     {
-                        if (radius > 0)
-                        {
-                            this.Radius = radius;
-                        }
-                        else
-                        {
-                            throw new FormatException();
-                        }
+                        radius = input;
                     }
                     else
                     {
@@ -42,7 +37,19 @@ namespace FigureSquare.Modules
                     Console.WriteLine(ex.Message);
                 }
             }
+
+            Radius = radius;
         }
+
+        // Конструктор для юнит-тестов
+        public Circle(double radius)
+        {
+            if (radius <= 0)
+                throw new ArgumentException("Радиус должен быть положительным");
+
+            Radius = radius;
+        }
+
         public double GetArea()
         {
             return Math.PI * Math.Pow(Radius, 2);
