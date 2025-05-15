@@ -32,7 +32,9 @@ namespace FigureSquare.Modules
         public Triangle(double side1, double side2, double side3)
         {
             if (side1 <= 0 || side2 <= 0 || side3 <= 0)
+            {
                 throw new ArgumentException("Стороны должны быть положительными");
+            }
 
             Side1 = side1;
             Side2 = side2;
@@ -87,9 +89,7 @@ namespace FigureSquare.Modules
             double middleSide = Math.Pow(sides[1], 2);
             double longSide = Math.Pow(sides[2], 2);
 
-            Type = Math.Abs(longSide - (shortSide + middleSide)) < 1e-10
-                ? "Прямоугольный треугольник"
-                : "Непрямоугольный треугольник";
+            Type = Math.Abs(longSide - (shortSide + middleSide)) < 1e-10 ? "Прямоугольный треугольник" : "Непрямоугольный треугольник";
         }
 
         public double GetArea()
@@ -97,9 +97,7 @@ namespace FigureSquare.Modules
             if (!Exist) return 0;
 
             var semiPerimeter = (Side1 + Side2 + Side3) / 2;
-            return Math.Sqrt(semiPerimeter * (semiPerimeter - Side1) *
-                                              (semiPerimeter - Side2) *
-                                              (semiPerimeter - Side3));
+            return Math.Sqrt(semiPerimeter * (semiPerimeter - Side1) * (semiPerimeter - Side2) * (semiPerimeter - Side3));
         }
     }
 }
